@@ -1,0 +1,21 @@
+  // put your setup code here, to run once:
+void setup(){
+  pinMode(11, OUTPUT); // The L9110 can control 2 motors. Each needs 2 pins.
+  pinMode(12, OUTPUT);
+  pinMode(8, INPUT);
+  
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:  
+//digitalRead(8, HIGH);
+  if (digitalRead(8) == HIGH){ 
+  digitalWrite(11, HIGH); // This will make the motor go forward   
+  digitalWrite(12, LOW); // Both lines are needed   
+  }
+  else{
+  digitalWrite(11, LOW);  // This will make the motor go backward   
+  digitalWrite(12, HIGH); // Both lines are needed.    
+  
+}
+}
